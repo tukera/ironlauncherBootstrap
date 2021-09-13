@@ -1,0 +1,18 @@
+<h1>{{user.username}},check out your favorite colors</h1>
+{{#each user.favorites}}
+<img src={{image}} alt={{name}}>
+<p>{{name}}</p>
+<form action = "/delete-favorite" method="POST">
+    <input type="hidden" name="id" value={{_id}}>
+
+<button type="submit">Delate</button>
+</form>
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{Color hex}}</h5>
+    <a href="#" class="btn btn-primary">Delate</a>
+  </div>
+</div>
+{{/each}}
